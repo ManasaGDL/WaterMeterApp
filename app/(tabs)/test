@@ -1,0 +1,77 @@
+{/* <View className="m-10 text-emerald-700">
+    {!hasAtLeastOneValue(userFields)? (
+      <CustomButton title="Add Profile" handlePress={() => {setIsCreatingProfile(true)
+        storeUserDetails()
+      }
+    
+    }/>
+    ) : (
+      <CustomButton title={isEditing ? 'Save' : 'Edit'} onPress={toggleEditMode} />
+    )}
+    </View>
+    
+    {isCreatingProfile ? (
+    <View className="bg-white rounded-lg pl-1 shadow-lg p-4">
+      {Object.keys(userFields).map((detail,index) => {
+        const formattedName = formatLabel(detail);
+    
+        if (detail !== 'occupant_type') {
+          return (
+            <View key={detail}>
+            {((!['tenant_name', 'tenant_phone'].includes(detail)) || userFields['occupant_type']==="Tenant")&&<View key={detail} className="mb-2">
+              <Text className="text-xs font-semibold text-gray-600 mb-1">{formattedName}</Text>
+              <TextInput
+                className="border border-gray-300 rounded-lg p-2 text-base"
+                value={userFields[detail]}
+                onChangeText={(value) => handleInputChange(detail, value)}
+              />
+            
+            </View>}
+            </View>
+          );
+        } else {
+          return (
+            <View key={detail} className="mb-2">
+              <Text className="text-xs font-semibold text-gray-600 mb-1">{formattedName}</Text>
+              <View className="border border-gray-300 rounded-lg h-12">
+                <Picker
+                  selectedValue={userFields.occupant_type} // Use userFields for occupant_type
+                  onValueChange={(itemValue) => handleInputChange('occupant_type', itemValue)}
+                >
+                  <Picker.Item label="Owner" value="Owner" />
+                  <Picker.Item label="Tenant" value="Tenant" />
+                </Picker>
+              </View>
+            </View>
+          );
+        }
+      })}
+    
+      
+    </View>
+    ):<View className="m-10 text-emerald-700">
+    <View className="bg-white rounded-lg pl-1 shadow-lg p-4">
+      {Object.keys(userDetails).map((detail) => {
+        const formattedName = formatLabel(detail);
+        return isEditing ? (
+          <TextInput
+            key={detail}
+            value={userDetails[detail]}
+            onChangeText={(value) => handleInputChange(detail, value)}
+            style={{ borderBottomWidth: 1, marginBottom: 10 }}
+          />
+        ) : (
+          <TextComponent
+            key={detail}
+            name={formattedName}
+            value={userDetails[detail]}
+            customStyles="text-gray-600 font-pmedium"
+          />
+        );
+      })}
+    </View>
+    <CustomButton title={isEditing ? 'Save' : 'Edit'} onPress={toggleEditMode} />
+    </View>
+    }  */}
+    
+    
